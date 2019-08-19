@@ -26,7 +26,8 @@
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern app/tests/acceptance --ignore-pattern internals/scripts --ignore-pattern internals/webpack .",
     "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern app/tests/acceptance --ignore-pattern internals/scripts --ignore-pattern internals/webpack . --fix",
     "lint:js": "npm run lint:eslint",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "lint:staged": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
