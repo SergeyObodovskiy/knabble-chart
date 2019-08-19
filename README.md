@@ -12,7 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-**Note: to improve application performance and do deeper testing we can use React + D3 + `react-faux-dom` [https://github.com/Olical/react-faux-dom] So, using the faux dom we can use all the D3.js API methods and explore snapshot testing**
+**Note: Because of the impossibility of work together the two brushes in one graph(because only one layer is active for events) I had to make extra functionality for the area selecting.
+Charts performances tested in Chrome inspector using Performance tab.**
 
 ### `npm test`
 
