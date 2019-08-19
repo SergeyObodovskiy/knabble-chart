@@ -1,8 +1,18 @@
 {
   "name": "knabble-chart",
-  "version": "0.1.0",
+  "author": "Obodovsky Sergey",
+  "version": "0.0.1",
+  "description": "Knabble – UI Engineering Case Study from SoftTeco",
   "private": true,
   "dependencies": {
+    "d3": "^5.9.7",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "node-sass": "^4.12.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2",
+    "prettify": "^0.1.7",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -11,8 +21,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern app/tests/acceptance --ignore-pattern internals/scripts --ignore-pattern internals/webpack .",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern app/tests/acceptance --ignore-pattern internals/scripts --ignore-pattern internals/webpack . --fix",
+    "lint:js": "npm run lint:eslint",
+    "prettify": "prettier --write"
   },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "pre-commit": "lint:staged",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -27,5 +53,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^9.1.2",
+    "babel-jest": "^24.7.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.7.1",
+    "react-test-renderer": "^16.9.0"
   }
 }
