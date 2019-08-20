@@ -63,13 +63,11 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@testing-library/react": "^9.1.2",
-    "babel-jest": "^24.7.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-react": "^7.14.3",
-    "jest": "^24.7.1",
     "react-test-renderer": "^16.9.0"
   }
 }
