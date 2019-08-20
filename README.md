@@ -6,7 +6,7 @@ This project is to present how we can build visualizations with custom behavior 
 - Ability to select portions of the line via left-click-and-drag, highlighting the selected dots in a different color
 - Allow each dot to be left-click-and-dragged verticallyresulting in a corresponding change in the chart line
 
-**Note: It was hard to make too brushes to work together on the same chart (because only one layer is active for events),
+**Note: It was hard to make two brushes to work together on the same chart (because only one layer is active for events),
 so I had to make extra functionality for the area selecting.**
 
 ## Installation
